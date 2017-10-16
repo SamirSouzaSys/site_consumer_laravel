@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        function envia(){
+            $.ajax({
+                url: 'http://localhost:9988/../api/cadastro',
+                type: 'POST',
+                data:{
+                    'name'    : 'Paulo',
+                    'email'   : 'a@gmail.com',
+                    'password': '123123'
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <button onclick="envia();">Cadastrar</button>
+</body>
+</html>
